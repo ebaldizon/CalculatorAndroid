@@ -61,37 +61,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         this.btnNum7.setOnClickListener(this);
         this.btnNum8.setOnClickListener(this);
         this.btnNum9.setOnClickListener(this);
+
+        this.btnDelete.setOnClickListener(this);
+        this.btnAC.setOnClickListener(this);
+        this.btnPercentage.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         onClickNumbers(v);
         onClickOperators(v);
-    }
-
-    public void calculate()
-    {
-        if(this.estate != false && this.numbers2 != null) {
-            int nums1 = Integer.parseInt(this.numbers1);
-            int nums2 = Integer.parseInt(this.numbers2);
-            switch (this.operator) {
-                case "+":
-                    this.result = nums1 + nums2;
-                    break;
-                case "-":
-                    this.result = nums1 - nums2;
-                    break;
-                case "*":
-                    this.result = nums1 * nums2;
-                    break;
-                case "/":
-                    this.result  = nums1/nums2;
-                    break;
-            }
-            txtvwOperations.setText(""+ this.result);
-            this.numbers1 = ""+ this.result;
-            this.numbers2 = "";
-        }
     }
 
     public void onClickOperators(View v)
@@ -117,10 +96,56 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 txtvwOperations.setText(this.numbers1+this.operator);
                 this.estate = true;
                 break;
+            case R.id.btnPercentage:
+                this.operator = "%";
+                txtvwOperations.setText(this.numbers1+this.operator);
+                this.estate = true;
+                break;
             case R.id.btnEquals:
+
                 calculate();
                 break;
+            case R.id.btnAC:
+                resetAll();
+                break;
         }
+    }
+
+
+    public void calculate()
+    {
+        if(this.estate != false && this.numbers2 != "") {
+            int nums1 = Integer.parseInt(this.numbers1);
+            int nums2 = Integer.parseInt(this.numbers2);
+            switch (this.operator) {
+                case "+":
+                    this.result = nums1 + nums2;
+                    break;
+                case "-":
+                    this.result = nums1 - nums2;
+                    break;
+                case "*":
+                    this.result = nums1 * nums2;
+                    break;
+                case "/":
+                    this.result  = nums1/nums2;
+                    break;
+                case "%":
+                    this.result  = (nums2 * 100) / nums1;
+                    break;
+            }
+            txtvwOperations.setText(""+ this.result);
+            this.numbers1 = ""+ this.result;
+            this.numbers2 = "";
+        }
+    }
+
+    public void resetAll() {
+        this.numbers1 = "";
+        this.numbers2 = "";
+        this.operator = "";
+        this.estate = false;
+        txtvwOperations.setText("");
     }
 
     public void onClickNumbers(View v) {
