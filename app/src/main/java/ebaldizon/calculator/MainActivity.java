@@ -102,8 +102,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 this.estate = true;
                 break;
             case R.id.btnEquals:
-
-                calculate();
+                try{
+                    calculate();
+                }catch (Exception e)
+                {
+                    txtvwOperations.setText("ERROR");
+                }
                 break;
             case R.id.btnAC:
                 resetAll();
