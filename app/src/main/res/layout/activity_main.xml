@@ -4,23 +4,20 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="5dp"
-    >
+    android:padding="5dp">
 
-    <TableRow android:background="#DFDFDF">
         <TextView
-            android:id="@+id/view1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="00"
+            android:id="@+id/txtvwOperations"
+            android:layout_width= "wrap_content"
+            android:layout_height="250px"
+            android:text=""
             android:textSize="36sp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"/>
-    </TableRow>
 
     <TableRow>
         <Button
-            android:id="@+id/DEL"
+            android:id="@+id/btnDelete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="0"
@@ -28,7 +25,7 @@
             android:text="DEL"/>
 
         <Button
-            android:id="@+id/AC"
+            android:id="@+id/btnAC"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="1"
@@ -36,7 +33,7 @@
             android:text="AC"/>
 
         <Button
-            android:id="@+id/opPercentage"
+            android:id="@+id/btnPercentage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="2"
@@ -44,7 +41,7 @@
             android:text="%"/>
 
         <Button
-            android:id="@+id/opDivision"
+            android:id="@+id/btnDivision"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="3"
@@ -54,7 +51,7 @@
 
     <TableRow>
         <Button
-            android:id="@+id/num7"
+            android:id="@+id/btnNum7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="0"
@@ -62,7 +59,7 @@
             android:text="7"/>
 
         <Button
-            android:id="@+id/num8"
+            android:id="@+id/btnNum8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="1"
@@ -70,7 +67,7 @@
             android:text="8"/>
 
         <Button
-            android:id="@+id/num9"
+            android:id="@+id/btnNum9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="2"
@@ -78,7 +75,7 @@
             android:text="9"/>
 
         <Button
-            android:id="@+id/opMultiplication"
+            android:id="@+id/btnMultiplication"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="3"
@@ -88,7 +85,7 @@
 
     <TableRow>
         <Button
-            android:id="@+id/num4"
+            android:id="@+id/btnNum4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="0"
@@ -96,7 +93,7 @@
             android:text="4"/>
 
         <Button
-            android:id="@+id/num5"
+            android:id="@+id/btnNum5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="1"
@@ -104,7 +101,7 @@
             android:text="5"/>
 
         <Button
-            android:id="@+id/num6"
+            android:id="@+id/btnNum6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="2"
@@ -112,7 +109,7 @@
             android:text="6"/>
 
         <Button
-            android:id="@+id/opSubtraction"
+            android:id="@+id/btnSubtraction"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="3"
@@ -122,7 +119,7 @@
 
     <TableRow>
         <Button
-            android:id="@+id/num1"
+            android:id="@+id/btnNum1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="0"
@@ -130,7 +127,7 @@
             android:text="1"/>
 
         <Button
-            android:id="@+id/num2"
+            android:id="@+id/btnNum2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="1"
@@ -138,7 +135,7 @@
             android:text="2"/>
 
         <Button
-            android:id="@+id/num3"
+            android:id="@+id/btnNum3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="2"
@@ -146,7 +143,7 @@
             android:text="3"/>
 
         <Button
-            android:id="@+id/opAddition"
+            android:id="@+id/btnAddition"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="3"
@@ -156,7 +153,7 @@
 
     <TableRow>
         <Button
-            android:id="@+id/num0"
+            android:id="@+id/btnNum0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="0"
@@ -164,7 +161,7 @@
             android:text="0"/>
 
         <Button
-            android:id="@+id/sPoint"
+            android:id="@+id/btnPoint"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="1"
@@ -172,7 +169,7 @@
             android:text="."/>
 
         <Button
-            android:id="@+id/OpRepeat"
+            android:id="@+id/btnRepeat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="2"
@@ -180,7 +177,7 @@
             android:text="+/-"/>
 
         <Button
-            android:id="@+id/OpEquals"
+            android:id="@+id/btnEquals"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="3"
